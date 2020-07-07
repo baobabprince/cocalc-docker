@@ -256,7 +256,14 @@ RUN \
 # NOTE: Upgrading zmq is very important, or the Ubuntu version breaks everything..
 RUN \
   pip3 install --upgrade --no-cache-dir  pandas plotly scipy  scikit-learn seaborn bokeh zmq
-
+# added by baobab prince
+RUN \
+pip3 install scikit-bio docrep
+pip3 install git+git://github.com/biocore/calour.git
+pip3 install git+git://github.com/amnona/dbbact-calour
+pip3 install git+git://github.com/amnona/calour_utils
+pip3 install git+git://github.com/amnona/pheno-calour
+pip3 install git+git://github.com/amnona/gnps-calour
 CMD /root/run.py
 
 ARG BUILD_DATE
