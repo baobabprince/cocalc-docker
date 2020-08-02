@@ -258,11 +258,20 @@ RUN \
   pip3 install --upgrade --no-cache-dir  pandas plotly scipy  scikit-learn seaborn bokeh zmq
 # added by baobab prince
 RUN \
+pip3 install cython
+RUN \
+pip3 install numpy
+RUN \
 pip3 install scikit-bio docrep
+RUN \
 pip3 install git+git://github.com/biocore/calour.git
+RUN \
 pip3 install git+git://github.com/amnona/dbbact-calour
+RUN \
 pip3 install git+git://github.com/amnona/calour_utils
+RUN \
 pip3 install git+git://github.com/amnona/pheno-calour
+RUN \
 pip3 install git+git://github.com/amnona/gnps-calour
 CMD /root/run.py
 
